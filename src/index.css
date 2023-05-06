@@ -1,13 +1,87 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    box-sizing: border-box !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.button{
+    background-color: transparent;
+    border: none;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.button-icon_icon{
+    font-size: 24px;
+}
+
+.button-icon_icon:hover{
+    transform: scale(110%);
+}
+
+.modal-container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#statusList{
+    position: fixed;
+    width: max-content;
+    left: 0; right: 0; 
+    bottom: 10px;
+    margin: 0 auto;
+}
+
+@media all and (max-width: 576px){
+    .card{
+        width: 90%;
+        margin: auto;
+    }
+    #form-inputs{
+        flex-direction: column;
+        padding: 0 10px;
+    }
+    #form-inputs .col{
+       padding-left: 0;
+       margin-bottom: 15px;
+    }
+    #form-inputs .col:last-child{
+        margin-bottom: 0;
+        display: flex;
+        justify-content: center;
+    }
+    #filter-inputs{
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+    #filter-inputs .col, #filter-inputs .col-2, #filter-inputs .col-3{
+        width: 100%;
+        padding: 0;
+        margin-bottom: 10px;
+    }
+    #filter-inputs div:last-child{
+        margin-bottom: 0;
+        justify-content: center;
+    }
+    #card-table{
+        overflow-x: hidden;
+    }
+    #card-table #table-list td{
+        overflow-x: auto;
+    }
+    #modal{
+        width: 90vw !important;
+    }
 }
